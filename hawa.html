@@ -1,0 +1,87 @@
+<DOCTYPE html>
+	<head>
+	 <meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1,maximum-scale=1"/>
+  	 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <script src="jquery.mobile-1.4.1.min.js"></script>
+	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.css" />
+	<link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" />
+	<link rel = "stylesheet" href= "main.css" />
+
+
+	<!-- js files for drawing board-->
+	
+		<link rel="stylesheet" href="Dboard/css/drawingboard.css">
+		<script src="Dboard/js/utils.js"></script>
+		<script src="Dboard/js/board.js"></script>
+		<script src="Dboard/js/controls/control.js"></script>
+		<script src="Dboard/js/controls/color.js"></script>
+		<script src="Dboard/js/controls/drawingmode.js"></script>
+		<script src="Dboard/js/controls/navigation.js"></script>
+		<script src="Dboard/js/controls/size.js"></script>
+		<script src="Dboard/js/controls/download.js"></script>
+
+		<script>
+$(document).on("pagecreate", "#pageone", function(){
+  $("#pageone").on("swipe", function(){
+  	//console.log("asdasd");
+  	location.assign('./hawa1.html');
+  });
+                        
+});
+</script>
+
+		<script>
+			$(document).ready(function(){
+				
+				$('.sketch').click(function(){
+					$('.sketch').slideUp(function(){
+						$('#board').fadeIn('slow');	
+					});
+				
+				});
+
+				$('.back-btn').click(function(){
+					$('#board').slideUp(function(){
+						$('.sketch').fadeIn('slow');	
+					});
+					
+
+				});
+					$('.ui-loader').hide();
+				});
+
+		</script>
+		
+
+	</head>
+	<body>
+		<div id = "pageone" data-role = "page" style = "overflow:hidden">
+			<div class = "header" data-role = "header" style = "background-color: #0a5960;">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<img src="images/logo.png" />
+						<a href="#" ><i class="fa fa-times fa-2x icon"></i></a>
+					</div>
+				</div>
+		</div>
+			<div data-role = "main">
+				<div class = "col-sm-12 col-xs-12 sketch">
+			<div class = 'tiles'>
+				<br/><br/>
+			<img src = "images/sketch.jpg"></i>
+			<br/><b style = "font-size:40px">Etch n Sketch<br/></b>
+			<br/><br/>
+			</div>
+			</div>
+			<!-- drawing board starts-->
+		<div class = "col-xs-12 col-sm-12 tiles" id = "board">
+			<div class = "back-btn"><i class="fa fa-caret-left fa-4x"></i>
+		</div>
+		<script> var board = new DrawingBoard.Board('board'); </script>
+			</div>
+		</div>
+		<div data-role="footer" style = "background-color: #0a5960;;height:15px;position:fixed;bottom:0px;width:100%"></div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<DOCTYPE html>
+	<head>
+	 <meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1,maximum-scale=1"/>
+  	 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  	<script src="jquery.mobile-1.4.1.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.css" />
+	<link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" />
+	<link rel = "stylesheet" href= "main.css" />
+
+
+	<!-- js files for drawing board-->
+
+		<script>
+$(document).on("pagecreate", "#page0", function(){
+  $("#page0").on("swipeleft", function(){
+  	//onsole.log("asdasd");
+  	location.assign('./hawa.html');
+  });   
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+		$('.ui-loader').hide();
+});
+</script>
+
+	</head>
+	<body>
+		<div id = "page0" data-role = "page" class = "main-header" style = "overflow:hidden;color:#FFF;text-align:center">
+		<div class = "header" data-role = "header" style = "padding-top:20%">
+			<h1 style = "font-weight:100">WizKid</h1>
+			<span style = "font-size:12px;">New Generation</span>
+		</div>
+		<br/><br/><br/><br/><br/>
+		<div data-role = "main" class="ui-content">
+				
+			<div class = 'main-circle'>
+				<img class = "img-responsive" src = "dexter.png"/>
+			</div>
+				
+		</div>
+		<br/><br/><p>Swipe To Enter <i class = "fa fa-forward" style = "font-size:18px"></i><br/>
+		<div data-role="footer" style = "font-size:12px;font-weight:100;"></div>
+			<underline>Built by Chewing Gum</underline>
+		</div>
+	</body>
+</html>

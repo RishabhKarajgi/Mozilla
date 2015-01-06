@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.css" />
+	<link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" />
+	 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="jquery.mobile-1.4.1.min.js"></script>
+	
+   <script>
+   	$(document).on("pagecreate", "#page3", function(){
+  $("#page3").on("swipeleft", function(){
+  	console.log("asdasd");
+  	location.assign('./hawa.html');
+  });
+
+  $("#page3").on("swiperight", function(){
+  	console.log("asdasd");
+  	location.assign('./hawa1.html');
+  });                       
+});
+   </script>
+
+
+   <script type="text/javascript">
+   	$(document).ready(function(){
+	$('.sketch').click(function(){
+		$('.sketch').slideUp();
+		$('.C').fadeIn('slow');
+	});
+
+$('.back-btn').click(function(){
+		$('.C').slideUp(function(){
+			$('.sketch').fadeIn('slow');	
+		});
+	});
+
+	$('.ui-loader').hide();
+
+});
+   </script>
+	<link rel = "stylesheet" href= "main.css" />
+	<head>
+
+
+	</head>
+
+	<body>
+
+		<div id = "page3" data-role = "page" style = "overflow:hidden">
+			<div class = "header" data-role = "header" style = "background-color:#0a5960">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<img src="images/logo.png" />
+						<a href="#" ><i class="fa fa-times fa-2x icon"></i></a>
+					</div>
+				</div>
+		</div>
+			<div data-role = "main" class="ui-content">
+				<div class = "col-sm-12 col-xs-12 sketch">
+			<div class = 'tiles'>
+				<br/><br/>
+			<img src = "images/rhymes.jpg" height = "230" width = "170"/>
+			<br/><b style = "font-size:40px">Rhymes</b>
+			<br/><br/><br/>
+			</div>
+			</div>
+			<!-- drawing board starts-->
+			<div class = "C">
+				<div class="rhymes" style = "text-align:center;color:#0a5960;">
+				<h2><strong>Quiz</strong></h2>
+				<div class = "divider"></div><br/>
+				<div class = "back-btn" style = "margin-left:10px">
+				<i class="fa fa-caret-left fa-4x"></i></div>
+				<div class="container">
+					<div class="audio col-xs-12 col-sm-12" >
+						<h5>Baa Baa Black Sheep</h5>
+						<audio id="1" preload="auto">
+							<source src="rhymes/baa_baa.mp3" type="audio/mpeg">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('1').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('1').pause()"></i>
+						</div>
+					</div>
+					
+					<div class = "divider col-sm-12 col-xs-12"></div>
+
+					<div class="audio col-xs-12 col-sm-12">
+						<h5>Hickory Dickory Dock</h5>
+						<audio id="2" preload="auto">
+							<source src="rhymes/hickory_dickory.mp3" type="audio/mpeg">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('2').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('2').pause()"></i>
+						</div>
+					</div>
+
+					<div class = "divider col-sm-12 col-xs-12"></div>
+					
+				
+					<div class="audio col-xs-12 col-sm-12">
+						<h5>Jack and Jill Went Up the Hill</h5>
+						<audio id="3" preload="auto">
+							<source src="rhymes/jack_jill.mp3" type="audio/mpeg">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('3').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('3').pause()"></i>
+						</div>
+					</div>
+
+					<div class = "divider col-sm-12 col-xs-12"></div>
+
+					<div class="audio col-xs-12 col-sm-12">
+						<h5>London Bridge is Falling Down</h5>
+						<audio id="4" preload="auto">
+							<source src="rhymes/london_bridge.mp3" type="audio/mpeg">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('4').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('4').pause()"></i>
+						</div>
+					</div>
+
+					
+				</div>
+
+
+				</div>
+
+		
+		</div>
+	<br/>
+		</div>
+		<div data-role="footer" style = "background-color: #0a5960;;height:15px;position:fixed;bottom:0px;width:100%"></div>
+	</div>
+		<script type="text/javascript" src="scripts/audio.js"></script>
+	</body>
+</html>

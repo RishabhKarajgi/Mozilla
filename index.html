@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.css" />
+	<link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" />
+	<link rel = "stylesheet" href= "main.css" />
+
+
+	<!-- js files for drawing board-->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" href="Dboard/css/drawingboard.css">
+		<script src="Dboard/js/utils.js"></script>
+		<script src="Dboard/js/board.js"></script>
+		<script src="Dboard/js/controls/control.js"></script>
+		<script src="Dboard/js/controls/color.js"></script>
+		<script src="Dboard/js/controls/drawingmode.js"></script>
+		<script src="Dboard/js/controls/navigation.js"></script>
+		<script src="Dboard/js/controls/size.js"></script>
+		<script src="Dboard/js/controls/download.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				$('.sketch').click(function(){
+					$('.menu').slideUp();
+					$('#board').fadeIn('slow');
+					//$('.back-btn').fadeIn('slow');
+				});
+
+				$('.back-btn').click(function(){
+					$('#board').slideUp();
+					$('.menu').fadeIn('slow');
+
+				});
+
+
+				});
+			
+
+		</script
+
+	<head>
+
+
+	</head>
+
+	<body>
+		<div class = "container-fluid" style = "background-color: #FFF;padding:0;overflow:hidden">
+			
+			<div class="header">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<img src="images/logo.png" />
+						<a href="#" ><i class="fa fa-gears fa-2x icon"></i></a>
+					</div>
+				</div>
+					
+				
+			</div>
+			<div class = "menu">
+			<div class = "col-sm-12 col-xs-12 sketch">
+			<div class = 'tiles'>
+				<br/><br/>
+			<i class="fa fa-pencil-square-o" style = 'font-size:100px'></i>
+			<br/><b>Etch n Sketch</b>
+			<br/><br/><br/>
+			</div>
+		</div>
+
+		<div class = "divider col-sm-12 col-xs-12" style = "background-color: #0a5960"></div>
+			<div class = "col-sm-12 col-xs-12">
+			<div class = 'tiles'>
+				<br/><br/>
+			<i class="fa fa-question" style = 'font-size:100px'></i>
+			<br/><b>Quiz Time</b>
+			<br/><br/><br/>
+			</div>
+		</div>
+		<div class = "divider col-sm-12 col-xs-12" style = "background-color: #0a5960"></div>
+			<div class = "col-sm-12 col-xs-12">
+			<div class = 'tiles'>
+				<br/><br/>
+			<i class="fa fa-music" style = 'font-size:100px'></i>
+			<br/><br/><b>Nursery Rhymes</b>
+			<br/><br/><br/>
+			</div>
+		</div>
+		<div class = "divider col-sm-12 col-xs-12" style = "background-color: #0a5960"></div>
+			<div class = "col-sm-12 col-xs-12">
+			<div class = 'tiles'>
+				<br/><br/>
+			<i class="fa fa-mortar-board" style = 'font-size:100px'></i>
+			<br/><b>Study Time</b>
+			<br/><br/><br/>
+			</div>
+		</div>
+		<div class = "divider col-sm-12 col-xs-12" style = "background-color: #0a5960;height:10px"></div>
+		</div> <!-- menu ends -->
+		<!-- drawing board starts-->
+		<div class = "col-xs-12 col-sm-12 tiles" id = "board">
+			<div class = "back-btn"><i class="fa fa-caret-left fa-4x"></i>
+		</div>
+		
+		<script> var board = new DrawingBoard.Board('board'); </script>
+		<div>
+	</body>
+</html>

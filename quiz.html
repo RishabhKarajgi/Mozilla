@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.css" />
+	<link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" />
+	
+	<link rel = "stylesheet" href= "main.css" />
+	<head>
+
+
+	</head>
+
+	<body>
+		<div class = "container-fluid" style = "overflow:hidden; background-color: #FFF;padding:0;">
+			<div class="header" style = "background-color:#0a5960;">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<img src="images/logo.png" />
+						<a href="main.html" ><i class="fa fa-gears fa-2x icon"></i></a>
+					</div>
+				</div>
+			</div>
+			<!--FONT AWESOME -->
+
+			<div class="rhymes" style = "text-align:center;color:#0a5960;">
+				<h2><strong>Quiz</strong></h2>
+				<div class = "divider"></div>
+				<br>
+				
+				<div class="row">
+					<div class="quiz-active col-xs-12 col-sm-12" style="background-color: white"><!-- rgba(255, 73, 73, 1) -->
+						<h3>1. Which animal am I?</h3>
+						<audio id="1" preload="auto">
+							<source src="animals/tiger_growl.wav">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('1').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('1').pause()"></i>
+						</div>
+						<br>
+						<button class="btn btn-primary">Cat</button>
+						<button class="btn btn-primary correct">Tiger</button>
+						<button class="btn btn-primary">Dog</button>
+						<button class="btn btn-primary">Elephant</button>
+						<br>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="quiz-inactive col-xs-12 col-sm-12" style="background-color: white">
+						<h3>2. Which animal am I?</h3>
+						<audio id="2" preload="auto">
+							<source src="animals/dog_bark.wav">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('2').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('2').pause()"></i>
+						</div>
+						<br>
+						<button class="btn btn-primary">Cat</button>
+						<button class="btn btn-primary">Tiger</button>
+						<button class="btn btn-primary correct">Dog</button>
+						<button class="btn btn-primary">Elephant</button>
+						<br>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="quiz-inactive col-xs-12 col-sm-12" style="background-color: white">
+						<h3>3. Which animal am I?</h3>
+						<audio id="3" preload="auto">
+							<source src="animals/elephant_trumpet.wav">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('3').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('3').pause()"></i>
+						</div>
+						<br>
+						<button class="btn btn-primary">Cat</button>
+						<button class="btn btn-primary">Tiger</button>
+						<button class="btn btn-primary">Horse</button>
+						<button class="btn btn-primary correct">Elephant</button>
+						<br>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="quiz-inactive col-xs-12 col-sm-12" style="background-color: white">
+						<h3>4. Which animal am I?</h3>
+						<audio id="4" preload="auto">
+							<source src="animals/cat_meow.wav">
+						</audio>
+						<div>
+							<i class="fa fa-play ab" onclick="document.getElementById('4').play()"></i>
+							<i class="fa fa-pause ab" onclick="document.getElementById('4').pause()"></i>
+						</div>
+						<br>
+						<button class="btn btn-primary correct">Cat</button>
+						<button class="btn btn-primary">Tiger</button>
+						<button class="btn btn-primary">Horse</button>
+						<button class="btn btn-primary">Elephant</button>
+						<br>
+					</div>
+				</div>
+
+				
+			</div>
+
+
+		</div>
+		<script type="text/javascript" src="scripts/audio.js"></script>
+		<script type="text/javascript" src="scripts/quiz.js"></script>
+	</body>
+</html>
